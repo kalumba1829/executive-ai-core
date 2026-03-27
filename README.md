@@ -333,7 +333,7 @@ MIT means : you can use, copy, modify, and distribute this code freely, for any 
 
 ## 12. Contact
 
-Project maintained by [Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology).
+Project maintained by [Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology)
 
 - Email : convergence-tech@proton.me
 - LinkedIn : [company/convergence-organization](https://www.linkedin.com/company/convergence-organization)
