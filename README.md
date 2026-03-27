@@ -337,7 +337,7 @@ Project maintained by [Convergence - Human And Technology](https://github.com/Co
 
 - Email : convergence-tech@proton.me
 - LinkedIn : [company/convergence-organization](https://www.linkedin.com/company/convergence-organization)
-- Facebook : [Convergence - Human And Technology](https://www.facebook.com/people/Convergence-Human-and-Technology)
+- Facebook : [Convergence - Human And Technology](https://www.facebook.com/people/Convergence-Human-And-Technology/61578483081894/)
 - GitHub : [Convergence-Human-And-Technology](https://github.com/Convergence-Human-And-Technology)
 
 ---
