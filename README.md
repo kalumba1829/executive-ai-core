@@ -340,10 +340,11 @@ MIT means : you can use, copy, modify, and distribute this code freely, for any 
 Project maintained by [Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology)
 
 - Email : convergence-tech@proton.me
-- Site Web : https://convergence-human-technology.github.io/site
-- LinkedIn : [company/convergence-organization](https://www.linkedin.com/company/convergence-organization)
-- Facebook : [Convergence - Human And Technology](https://www.facebook.com/people/Convergence-Human-And-Technology/61578483081894/)
-- GitHub : [Convergence-Human-And-Technology](https://github.com/Convergence-Human-And-Technology)
+
+- [Site Web : Convergence - Human And Technology](https://convergence-human-technology.github.io/site)
+- [LinkedIn : Convergence - Human And Technology](https://www.linkedin.com/company/convergence-organization)
+- [Facebook : Convergence - Human And Technology](https://www.facebook.com/people/Convergence-Human-And-Technology/61578483081894/)
+- [GitHub : Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology)
 
 ---
 
