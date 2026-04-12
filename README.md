@@ -21,6 +21,8 @@ Every concept, every line, every choice is explained.
   <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
 </p>
 
+![Convergence Cover](https://raw.githubusercontent.com/Convergence-Human-And-Technology/executive-ai-core/main/executive-ai-convergence.jpg)
+
 ## Table of Contents
 
 1. [What is this project ?](#1-what-is-this-project)
